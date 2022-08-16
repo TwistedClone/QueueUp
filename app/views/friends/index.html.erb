@@ -1,0 +1,35 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Friends</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th><%= @friends.name %></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td scope="row"></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td scope="row"></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+<div id="friends">
+  <% @friends.each do |friend| %>
+    <%= render friend %>
+    <p>
+      <%= link_to "Show this friend", friend %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New friend", new_friend_path %>
